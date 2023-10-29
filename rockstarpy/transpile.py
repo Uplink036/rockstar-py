@@ -29,6 +29,8 @@ class Transpiler(object):
             " nowhere ": " False ",
             " nobody ": " False ",
             " empty ": " False ",
+            " silent ": " False ",
+            " silence ": " False ",
             " gone ": " False ",
             " mysterious ": " False ",
             " true ": " True ",
