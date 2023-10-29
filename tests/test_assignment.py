@@ -64,7 +64,9 @@ class TestAssignment(unittest.TestCase):
     def test_let_be_bool(self):
         transpiler = Transpiler()
         py_line = transpiler.transpile_line("Let my beer be empty\n")
-        self.assertEqual(py_line, "my_beer = False\n")
+        self.assertEqual(py_line, "my_beer = \"\"\n")
+        py_line = transpiler.transpile_line("Let my mind be silent\n")
+        self.assertEqual(py_line, "my_mind = \"\"\n")
 
     def test_let_be_poetic(self):
         transpiler = Transpiler()

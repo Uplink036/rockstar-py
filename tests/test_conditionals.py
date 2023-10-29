@@ -12,6 +12,11 @@ class TestConditionals(unittest.TestCase):
         py_line = transpiler.transpile_line("If Tommy is nobody\n")
         self.assertEqual(py_line, "if Tommy == False:\n")
 
+    def test_empty_string(self):
+        transpiler = Transpiler()
+        py_line = transpiler.transpile_line("If my world is silence\n")
+        self.assertEqual(py_line, "if my_world == \"\":\n")
+
     def test_greater(self):
         transpiler = Transpiler()
         py_line = transpiler.transpile_line("If Tommy is stronger than Superman\n")
